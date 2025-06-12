@@ -1,0 +1,16 @@
+{
+  "name": "eslint-protection",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "eslint rule to protect parts of the code from unconscious change",
+  "main": "protection.js",
+  "scripts": {
+    "test": "node protection.test.js"
+  },
+  "keywords": [],
+  "author": "Alex Lohr <alex@crabnebula.dev>",
+  "license": "(MIT OR Apache-2.0)",
+  "devDependencies": {
+    "eslint": "^9.28.0"
+  }
+}

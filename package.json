@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "type": "module",
   "description": "eslint rule to protect parts of the code from unconscious change",
-  "main": "protection.js",
+  "main": "eslint-protection.js",
   "scripts": {
+    "lint": "eslint ./example1.js",
     "test": "node protection.test.js"
   },
   "keywords": [],

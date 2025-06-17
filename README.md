@@ -18,6 +18,49 @@ pnpm add -D eslint-protected
 
 Then in your eslint config, add
 
+```js
+import { defineConfig } from "eslint/config";
+import protection from "eslint-protection";
+
+export default defineConfig({    
+    plugins: { protection },
+    rules: {
+        "protection/protect": "error"
+    }
+});
+```
+
+Ideally, you set up `eslint` as a guarding mechanism for commits using e.g. `husky`; first, install the required dependencies:
+
+```sh
+npm add --save-dev husky lint-staged
+# or
+yarn add -D husky lint-staged
+# or
+pnpm add -D husky lint-staged
+```
+
+Next, initialize Husky:
+
+```sh
+npx husky-init && npm install
+# or
+npx husky-init && yarn
+# or
+pnpx husky-init && pnpm i
+```
+
+Lastly, add a pre-commit hook:
+
+```sh
+npx husky add .husky/pre-commit "npx lint-staged"
+# or
+pnpx husky add .husky/pre-commit "npx lint-staged"
+
+# in either case, make it executable:
+chmod +x .husky/pre-commit .husky/_/husky.sh
+```
+
 ## Usage
 
 To get the hash, just add `//@protected` without a hash and look at the error message.
@@ -41,3 +84,7 @@ To get the hash, just add `//@protected` without a hash and look at the error me
 ```
 
 Where `2` is the number of lines that should be protected below the comment.
+
+## VS Code extension
+
+There is a VS Code extension [`vscode-eslint-protected`](https://github.com/crabnebula-dev/vscode-eslint-protected) that will add the comments for you automatically.

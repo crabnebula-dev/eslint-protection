@@ -54,12 +54,16 @@ Lastly, add a pre-commit hook:
 
 ```sh
 npx husky add .husky/pre-commit "npx lint-staged"
+npx husky add .husky/pre-commit "node_modules/husky-protection/index.js"
 # or
 pnpx husky add .husky/pre-commit "npx lint-staged"
+pnpx husky add .husky/pre-commit "node_modules/husky-protection/index.js"
 
 # in either case, make it executable:
 chmod +x .husky/pre-commit .husky/_/husky.sh
 ```
+
+This will add the linter and another protection commit hook that will block commits that remove more protection comments than they add.
 
 ## Usage
 

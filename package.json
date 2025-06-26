@@ -1,5 +1,5 @@
 {
-  "name": "eslint-protection",
+  "name": "@crabnebula/eslint-protection",
   "version": "0.0.1",
   "type": "module",
   "description": "eslint rule to protect parts of the code from unconscious change",

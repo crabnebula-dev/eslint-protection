@@ -267,7 +267,6 @@ node scripts/update-protection-hashes.js
 
 For team environments, establish a clear process:
 
-```markdown
 ## Protected Code Change Process
 
 1. **Create a dedicated branch**: `feature/protected-auth-update`
@@ -277,7 +276,7 @@ For team environments, establish a clear process:
 5. **Request additional review**: Tag security/compliance team members
 6. **Verify in staging**: Test protected code changes thoroughly
 7. **Update documentation**: Record the change in your security change log
-```
+
 
 ### Emergency Scenarios
 

@@ -12,6 +12,6 @@
   "author": "Alex Lohr <alex@crabnebula.dev>",
   "license": "(MIT OR Apache-2.0)",
   "devDependencies": {
-    "eslint": "^9.28.0"
+    "eslint": "^9.39.5"
   }
 }
